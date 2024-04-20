@@ -26,7 +26,11 @@ function App() {
     })
   }
 
-  function editNote(id){
+  function editNote(id,editedNote){
+    setNotes((preNotes) => {
+      preNotes.map((note,index) => (
+        index===id ? editedNote: note))
+    });
     
   }
   return (
